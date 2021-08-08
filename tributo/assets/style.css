@@ -1,0 +1,151 @@
+/*VARIAVEIS*/
+:root{
+    --color-bg:#000;
+    --color-font:#fff;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/*HEADER*/
+header{
+    height: 10rem;
+    background-color: var(--color-bg);
+    color: var(--color-font);
+}
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+.title h1{
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.year h2{
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.video a i{
+    color: var(--color-font);
+    font-size: 1.875rem;
+}
+.video a i:hover{
+    color: brown;
+    transition: 1s;
+}
+.volume{
+    font-size: 0.875rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+}
+
+/*MAIN*/
+#banner{
+    background-image: url('../image/moore.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    cursor: pointer;
+}
+.test{
+    position:absolute;
+    background-color:rgba(0, 0, 0, 0.5);
+    width:100vw;
+    height:inherit;
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#FFF;
+}
+.test h2{
+    text-transform: uppercase;
+    margin-bottom: 0.625rem;
+    font-weight: 600;
+}
+.test p{
+    text-align: justify;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    width: 30%;
+}
+.test a{
+    text-decoration: none;
+    color: var(--color-font);
+}
+.test a:hover{
+    text-decoration: underline;
+    color: burlywood;
+}
+#banner:hover .test{
+    display:flex;
+}
+
+/*FOOTER*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color-bg);
+}
+.create{
+    color: var(--color-font);
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 200;
+}
+.contat a{
+    text-decoration: none;
+    color: var(--color-font);
+    background-color: rgb(167, 120, 2);
+    padding: 5px 15px;
+    border-radius: 15px;
+}
+.contat a:hover{
+    background-color:rgb(250, 193, 48);
+    transition: 1s;
+}
+
+/*RESPONSIVIDADE*/
+@media (max-width:768px){
+    .test p{
+        width: 60%;
+    }
+}
+
+@media (max-width:600px){
+    #banner{
+        height: 21rem;
+    }
+    .test p{
+        width: 80%;
+        margin: 0px 0.6rem;
+        font-size: 1rem;
+        line-height: 20px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .create{
+        margin-bottom: 5px;
+    }
+    .contat{
+        margin-top: 0.6rem;
+    }
+    .contat a{
+        padding: 5px 30px;
+    }
+}
